@@ -1,4 +1,3 @@
-import 'package:app_one/screens/layout_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +11,21 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LayoutScreen(),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('My Picture App'),
+      ),
+      body: Center(
+        child: Image(image: AssetImage('assets/rv1.jpg')),
+      ),
     );
   }
 }
